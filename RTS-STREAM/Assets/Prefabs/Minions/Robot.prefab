@@ -142,6 +142,7 @@ MonoBehaviour:
   builds:
   - {fileID: 114161823099333970, guid: 9a2d978ec1a254f43a0bcb19b5eb5335, type: 2}
   - {fileID: 114773956621173952, guid: 678bfc16a7f07534e97dc7854237611e, type: 2}
+  mv: {fileID: 0}
 --- !u!114 &114284979680802752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,6 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craftableUnit: {fileID: 114901943775985542}
   isEnabled: 0
+  states: 0
+  target: {x: 0, y: 0, z: 0}
+  targetTranform: {fileID: 0}
+  nv: {fileID: 0}
 --- !u!114 &114901943775985542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,7 +186,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 720
   m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

@@ -9,10 +9,17 @@ public class Info : MonoBehaviour
 
 	void Start ()
     {
-        text = GetComponent<Text>();	
-	}
-    public void ResourcesChanged(int resources)
-    {
-        text.text = "Resources: " + resources.ToString();
+        text = GetComponent<Text>();
+        InfoChanged();
+
     }
+    public void InfoChanged()
+    {
+        var resources = ResourceManager.singleton.resources.ToString();
+        var maxTroops = CivilizationMetrics.singleton.maxTroops.ToString();
+        var troops = CivilizationMetrics.singleton.troops.ToString();
+
+        text.text = string.Format("Resources: {0} \nTroops: {1}/{2}", resources, troops, maxTroops);
+    }
+
 }

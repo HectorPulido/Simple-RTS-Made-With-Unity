@@ -52,8 +52,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4665784527526698}
   - component: {fileID: 195824192142302258}
-  - component: {fileID: 114289092836103262}
-  - component: {fileID: 114630531600678354}
   - component: {fileID: 114478121739104668}
   - component: {fileID: 114929296663268366}
   m_Layer: 0
@@ -84,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435417041817434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.5477, y: 0, z: 183.13385}
+  m_LocalPosition: {x: 5.1105347, y: 0, z: 243.54181}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4063966131885662}
@@ -145,19 +143,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1057209811594318}
   m_Mesh: {fileID: 4300000, guid: c53c38a925ce7df4db0861fef013c7aa, type: 3}
---- !u!114 &114289092836103262
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435417041817434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05bb5393fe64bf34b9dca91faaa6ebf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isSelected: 0
-  craftableStuff: {fileID: 0}
 --- !u!114 &114478121739104668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,20 +155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftableUnit: {fileID: 114929296663268366}
---- !u!114 &114630531600678354
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435417041817434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08b9a3d6ba5641f4a91a506b9ebff8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  price: 100
-  preview: {fileID: 21300000, guid: b7c8583eb5d6808479706c49b36bdfe9, type: 3}
-  movil: 0
+  isEnabled: 0
+  states: 0
+  target: {x: 0, y: 0, z: 0}
+  targetTranform: {fileID: 0}
+  nv: {fileID: 0}
 --- !u!114 &114929296663268366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +186,7 @@ NavMeshAgent:
   m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 720
   m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

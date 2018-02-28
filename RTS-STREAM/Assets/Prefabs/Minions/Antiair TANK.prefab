@@ -173,6 +173,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftableUnit: {fileID: 114643359978637178}
+  isEnabled: 0
+  states: 0
+  target: {x: 0, y: 0, z: 0}
+  targetTranform: {fileID: 0}
+  nv: {fileID: 0}
 --- !u!114 &114643359978637178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,7 +218,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 720
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

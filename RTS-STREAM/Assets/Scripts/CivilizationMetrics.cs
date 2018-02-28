@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceManager : MonoBehaviour
+public class CivilizationMetrics : MonoBehaviour
 {
+    public int maxTroops;
     [SerializeField]
-    int Resources;
-    public int resources
+    int _troops;
+    public int troops
     {
-        get { return Resources; }
+        get { return _troops; }
         set
         {
-            Resources = value;
-            whenResourcesChanges.Invoke(Resources);
+            _troops = value;
+            whenResourcesChanges.Invoke(_troops);
         }
     }
     public MyIntEvent whenResourcesChanges;
 
-    public static ResourceManager singleton;
+    public static CivilizationMetrics singleton;
 
     void Awake()
     {

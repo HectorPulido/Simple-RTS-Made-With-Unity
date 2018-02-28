@@ -295,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Building.cs" />
+    <Compile Include="Assets\Scripts\BuildingCraft.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\CivilizationMetrics.cs" />
     <Compile Include="Assets\Scripts\CraftableUnit.cs" />
     <Compile Include="Assets\Scripts\Factory.cs" />
     <Compile Include="Assets\Scripts\Info.cs" />
@@ -302,6 +305,7 @@
     <Compile Include="Assets\Scripts\MenuLayout.cs" />
     <Compile Include="Assets\Scripts\MovileUnit.cs" />
     <Compile Include="Assets\Scripts\OnClick.cs" />
+    <Compile Include="Assets\Scripts\Resource.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Robot.cs" />
     <Compile Include="Assets\Scripts\UnitSelecter.cs" />

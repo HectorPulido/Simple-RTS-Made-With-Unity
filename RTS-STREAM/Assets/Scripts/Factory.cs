@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Factory : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Factory : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
         MenuLayout.singleton.DestroyAllChildren();
         for (int i = 0; i < units.Length; i++)
         {
@@ -32,6 +35,8 @@ public class Factory : MonoBehaviour
                 units[u].craftableUnit.price.ToString(),
                 () => {
                     if (units[u].craftableUnit.price > ResourceManager.singleton.resources)
+                        return;
+                    if (CivilizationMetrics.singleton.troops >= CivilizationMetrics.singleton.maxTroops)
                         return;
                     ResourceManager.singleton.resources -= units[u].craftableUnit.price;
                     AddUnitToQueue(u);
@@ -43,6 +48,10 @@ public class Factory : MonoBehaviour
     {
         if (unitsQueue.Count <= 0)
             return;
+        if (CivilizationMetrics.singleton.troops >= CivilizationMetrics.singleton.maxTroops)
+            return;
+
+        CivilizationMetrics.singleton.troops++;
         var go = unitsQueue.Dequeue();
         var pos = RandomInsideDonut(instanceRadius);
         Instantiate(go, 
