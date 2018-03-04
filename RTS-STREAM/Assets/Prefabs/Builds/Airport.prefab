@@ -11,6 +11,38 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1999815190089952}
   m_IsPrefabParent: 1
+--- !u!1 &1091700150987956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4655927016338790}
+  m_Layer: 0
+  m_Name: GroundBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1132055173303044
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4847210225285590}
+  - component: {fileID: 33973040657699242}
+  - component: {fileID: 23436883083506254}
+  m_Layer: 0
+  m_Name: Box01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1337029688681972
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,9 +83,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4914859206392942}
+  - component: {fileID: 114637422540133886}
   - component: {fileID: 65066212599097330}
   - component: {fileID: 54000913911030786}
-  - component: {fileID: 114643171208013338}
   - component: {fileID: 208779201112948130}
   - component: {fileID: 114765286271034170}
   - component: {fileID: 114161823099333970}
@@ -77,6 +109,20 @@ Transform:
   m_Father: {fileID: 4695949629636410}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4655927016338790
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091700150987956}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.78, y: 0, z: 5.16}
+  m_LocalScale: {x: 2.802389, y: 1, z: 8.310657}
+  m_Children:
+  - {fileID: 4847210225285590}
+  m_Father: {fileID: 4914859206392942}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4695949629636410
 Transform:
   m_ObjectHideFlags: 1
@@ -91,6 +137,19 @@ Transform:
   m_Father: {fileID: 4914859206392942}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4847210225285590
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132055173303044}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4655927016338790}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4914859206392942
 Transform:
   m_ObjectHideFlags: 1
@@ -102,9 +161,44 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4695949629636410}
+  - {fileID: 4655927016338790}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23436883083506254
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132055173303044}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e85dcd61998e03a46bd70fe8557d63ae, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23850667364091528
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -146,6 +240,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736716007595968}
   m_Mesh: {fileID: 4300000, guid: 8fcb7813db6f55a4a9e319bc179441ae, type: 3}
+--- !u!33 &33973040657699242
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132055173303044}
+  m_Mesh: {fileID: 4300000, guid: e85dcd61998e03a46bd70fe8557d63ae, type: 3}
 --- !u!54 &54000913911030786
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -184,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2a25ff82b56724a8f59566957f4ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  craftableUnit: {fileID: 114643171208013338}
+  entity: {fileID: 114637422540133886}
   craftRadius: 16
   onCrafted:
     m_PersistentCalls:
@@ -226,10 +327,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 114637422540133886}
+        m_MethodName: SetColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: MyEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  craftCompletedGO: {fileID: 1337029688681972}
+  craftUncompletedGO: {fileID: 1091700150987956}
   buildRenderer: {fileID: 23850667364091528}
   buildTime: 10
---- !u!114 &114643171208013338
+--- !u!114 &114637422540133886
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -237,12 +351,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999815190089952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeab4f7b4d0ab074a8ce47a8e07f740f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c0e30a832c70b14588d64fd9e6afd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
+  entityName: Airport
+  maxHealth: 1000
+  health: 1000
+  price: 2500
   preview: {fileID: 21300000, guid: 36f49410e4b9c9f40a3333ef0799b8cc, type: 3}
-  unitName: 
+  description: 
+  faction: 0
+  isSelectable: 1
+  renderers:
+  - {fileID: 23436883083506254}
+  - {fileID: 23850667364091528}
 --- !u!114 &114765286271034170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   units:
-  - {fileID: 114478121739104668, guid: 5eec0a915483b5c4e8a07275a4c52a53, type: 2}
+  - {fileID: 114502537078122374, guid: 5eec0a915483b5c4e8a07275a4c52a53, type: 2}
   craftTime: 10
   instanceRadius: {x: 10, y: 15}
 --- !u!208 &208779201112948130

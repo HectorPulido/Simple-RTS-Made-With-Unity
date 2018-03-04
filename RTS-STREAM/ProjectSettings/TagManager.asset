@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Build
   - Terrain
+  - Projectil
   layers:
   - Default
   - TransparentFX
