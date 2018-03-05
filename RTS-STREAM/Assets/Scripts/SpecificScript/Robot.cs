@@ -45,7 +45,6 @@ public class Robot : MonoBehaviour
     public Resource resource;
     void Mine()
     {
-
         if (resource == null)
             return;
         if (Vector3.Distance(transform.position, resource.transform.position) > range)
@@ -54,9 +53,8 @@ public class Robot : MonoBehaviour
             return;
         }
         transform.LookAt(resource.transform.position);
-
         resource.resourcesQuantity -= 10;
-        CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 100;
+        CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 10;
 
     }
     void MouseUp(RaycastHit rh)
@@ -98,6 +96,7 @@ public class Robot : MonoBehaviour
             return;
         if (!movileEntity.entity.isSelectable)
             return;
+
         MenuLayout.singleton.DestroyAllChildren();
         for (int i = 0; i < builds.Length; i++)
         {

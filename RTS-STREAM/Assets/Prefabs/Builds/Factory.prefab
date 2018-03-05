@@ -358,7 +358,7 @@ MonoBehaviour:
   - {fileID: 114335880298850546, guid: ac0501def60a4db49b9997cccbebed49, type: 2}
   - {fileID: 114268487376489218, guid: fe32cf8e24bf6f747a6db919a18a3da3, type: 2}
   - {fileID: 114287271890774348, guid: 86650a927fedc06438996c3196686e82, type: 2}
-  craftTime: 0.0001
+  craftTime: 5
   instanceRadius: {x: 5.16, y: 12.22}
 --- !u!114 &114914215342959930
 MonoBehaviour:

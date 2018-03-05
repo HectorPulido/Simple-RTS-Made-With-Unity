@@ -309,7 +309,6 @@
     <Compile Include="Assets\Scripts\SpecificScript\AntiAirplane.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Robot.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\RobotAttack.cs" />
-    <Compile Include="Assets\Scripts\SpecificScript\RobotHealer.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Tank.cs" />
     <Compile Include="Assets\Scripts\UIScripts\BuildingCraft.cs" />
     <Compile Include="Assets\Scripts\UIScripts\Info.cs" />

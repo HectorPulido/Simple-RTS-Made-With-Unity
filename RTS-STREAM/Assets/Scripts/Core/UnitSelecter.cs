@@ -32,7 +32,7 @@ public class UnitSelecter : MonoBehaviour {
         {
             rect = new Rect(startPos.x, Screen.height - startPos.y,
                                 endPos.x - startPos.x,
-                                -1 * (endPos.y - startPos.y));
+                                startPos.y - endPos.y);
             GUI.DrawTexture(rect, SelectionTexture);
         }
     }

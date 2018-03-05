@@ -24,8 +24,8 @@ public class MovileEntity : MonoBehaviour
     void Start()
     {
         nv = GetComponent<NavMeshAgent>();
-        target = transform.position;
         entity = GetComponent<RtsEntity>();
+        target = transform.position;
     }
 
     void Update()

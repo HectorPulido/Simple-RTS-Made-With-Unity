@@ -313,7 +313,7 @@ MonoBehaviour:
   units:
   - {fileID: 114961654936225378, guid: d716553bf51a0e44a901094741d8ffc1, type: 2}
   - {fileID: 114403249962075038, guid: 7bfb779146fa3724586ad4afb86c6d91, type: 2}
-  craftTime: 1
+  craftTime: 5
   instanceRadius: {x: 5.16, y: 12.22}
 --- !u!114 &114525067420023598
 MonoBehaviour:

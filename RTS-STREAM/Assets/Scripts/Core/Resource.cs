@@ -5,16 +5,16 @@ using UnityEngine;
 public class Resource : MonoBehaviour
 {
     public int maxResources = 500;
-    int _resourcesQuantity;
+    int ResourcesQuantity;
     public int resourcesQuantity
     {
-        get { return _resourcesQuantity; }
+        get { return ResourcesQuantity; }
         set
         {
-            _resourcesQuantity = value;
-            if (_resourcesQuantity <= 0)
+            ResourcesQuantity = value;
+            if (ResourcesQuantity <= 0)
                 Destroy(gameObject);
-            transform.localScale = initialScale * _resourcesQuantity / maxResources;
+            transform.localScale = initialScale * ResourcesQuantity / maxResources;
         }
     }
 
@@ -22,8 +22,7 @@ public class Resource : MonoBehaviour
     void Start()
     {
         initialScale = transform.localScale;
-        resourcesQuantity = maxResources;
-        
+        resourcesQuantity = maxResources;        
     }
 
 }

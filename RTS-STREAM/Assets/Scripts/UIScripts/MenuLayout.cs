@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MenuLayout : MonoBehaviour
 {
-
     public MenuCard menuCardPrefab;
 
     public static MenuLayout singleton;
@@ -25,6 +24,7 @@ public class MenuLayout : MonoBehaviour
 
         menuCard.image.sprite = sprite;
         menuCard.text.text = text;
+
         menuCard.button.onClick.RemoveAllListeners();
         menuCard.button.onClick.AddListener(buttonAction.Invoke);
     }
@@ -32,7 +32,7 @@ public class MenuLayout : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
 }

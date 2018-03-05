@@ -22,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator AI()
     {
         factories.Add(GetComponent<Factory>());
+
         yield return GenerateRobots(factories[0], 0, 3);
         GetRobots();
         yield return SetResourcesRobots(robots.GetRange(0,2).ToArray()
