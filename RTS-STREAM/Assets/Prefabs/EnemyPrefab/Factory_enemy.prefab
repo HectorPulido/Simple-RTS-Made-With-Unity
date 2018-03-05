@@ -56,7 +56,9 @@ GameObject:
   - component: {fileID: 208150545025337678}
   - component: {fileID: 54042952015962696}
   - component: {fileID: 114103070749994562}
-  - component: {fileID: 114202731779665904}
+  - component: {fileID: 114525067420023598}
+  - component: {fileID: 114005957592685858}
+  - component: {fileID: 114631409432315012}
   m_Layer: 0
   m_Name: Factory_enemy
   m_TagString: Build
@@ -117,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285948031576482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -82.10706, y: 0, z: 173.79523}
+  m_LocalPosition: {x: -86.8, y: 0, z: 195.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4398081882677256}
@@ -270,28 +272,50 @@ BoxCollider:
   m_GameObject: {fileID: 1285948031576482}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.6642556, y: 3.808733, z: 6.4963684}
   m_Center: {x: -0.39853597, y: 1.4043665, z: -0.018981934}
+--- !u!114 &114005957592685858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285948031576482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff83f2e85884d7a4abe6909f5aa61403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faction: 1
+  maxTroops: 15
+  _troops: 0
+  whenTroopsChanges:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  Resources: 5000
+  whenResourcesChanges:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyIntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114103070749994562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285948031576482}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c921544fe7ba3354bae2730b44172ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   units:
-  - {fileID: 114117345763991938, guid: fe32cf8e24bf6f747a6db919a18a3da3, type: 2}
-  - {fileID: 114775874184366910, guid: ac0501def60a4db49b9997cccbebed49, type: 2}
-  - {fileID: 114916997587447268, guid: 86650a927fedc06438996c3196686e82, type: 2}
-  craftTime: 5
+  - {fileID: 114961654936225378, guid: d716553bf51a0e44a901094741d8ffc1, type: 2}
+  - {fileID: 114403249962075038, guid: 7bfb779146fa3724586ad4afb86c6d91, type: 2}
+  craftTime: 1
   instanceRadius: {x: 5.16, y: 12.22}
---- !u!114 &114202731779665904
+--- !u!114 &114525067420023598
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -306,60 +330,27 @@ MonoBehaviour:
   craftRadius: 13
   onCrafted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 65984756577473686}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 208150545025337678}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: MyEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onCraftCompleted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114103070749994562}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 114985375526143698}
-        m_MethodName: SetColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: MyEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   craftCompletedGO: {fileID: 1490962158869358}
   craftUncompletedGO: {fileID: 1119285811897136}
   buildRenderer: {fileID: 23424134876343996}
-  buildTime: 10
+  buildTime: 0
+--- !u!114 &114631409432315012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285948031576482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600f6965ad804864181ddb49bb029730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114985375526143698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,7 +379,7 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285948031576482}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 3.09, y: 0.5, z: 3.25}

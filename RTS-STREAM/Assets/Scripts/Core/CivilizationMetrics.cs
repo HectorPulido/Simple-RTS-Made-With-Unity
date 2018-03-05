@@ -40,7 +40,7 @@ public class CivilizationMetrics : MonoBehaviour
     {
         if (singleton.ContainsKey(faction))
         {
-            Destroy(gameObject);
+            Destroy(this);
             return;
         }
         singleton.Add(faction,this);

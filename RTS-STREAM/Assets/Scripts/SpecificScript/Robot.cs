@@ -10,7 +10,8 @@ public class Robot : MonoBehaviour
     public float mineRate;
     public float range;
 
-    MovileEntity movileEntity;
+    [HideInInspector]
+    public MovileEntity movileEntity;
     void Start()
     {
         movileEntity = GetComponent<MovileEntity>();
@@ -19,7 +20,8 @@ public class Robot : MonoBehaviour
     }
 
 
-    Building building;
+    [HideInInspector]
+    public Building building;
     void Craft()
     {
         if (building == null)
@@ -39,7 +41,8 @@ public class Robot : MonoBehaviour
         building.SendMessage("CraftPoint");
     }
 
-    Resource resource;
+    [HideInInspector]
+    public Resource resource;
     void Mine()
     {
 
@@ -52,50 +55,40 @@ public class Robot : MonoBehaviour
         }
         transform.LookAt(resource.transform.position);
 
-        resource.resourcesQuantity -= 100;
+        resource.resourcesQuantity -= 10;
         CivilizationMetrics.singleton[movileEntity.entity.faction].resources += 100;
 
     }
-
-    RaycastHit rh;
-    void Update()
+    void MouseUp(RaycastHit rh)
     {
-        if (!movileEntity.isSelected)
+        if (!movileEntity.entity.isSelectable)
             return;
-        if (Input.GetMouseButtonUp(0))
+        if (rh.collider == null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out rh))
+            resource = null;
+            building = null;
+            return;
+        }
+
+        if (rh.collider.GetComponent<Resource>() != null)
+        {
+            var res = rh.collider.GetComponent<Resource>();
+            building = null;
+            resource = res;
+        }
+        else if (rh.collider.GetComponent<Building>() != null)
+        {
+            var build = rh.collider.GetComponent<Building>();
+            if (build.entity.faction == movileEntity.entity.faction)
             {
-                if (rh.collider != null)
-                {
-                    if (rh.collider.GetComponent<Resource>() != null)
-                    {
-                        var res = rh.collider.GetComponent<Resource>();
-                        building = null;
-                        resource = res;
-                    }
-                    else if (rh.collider.GetComponent<Building>() != null)
-                    {
-                        var build = rh.collider.GetComponent<Building>();
-                        if (build.entity.faction == movileEntity.entity.faction)
-                        {
-                            building = build;
-                            resource = null;
-                        }
-                    }
-                    else
-                    {
-                        building = null;
-                        resource = null;
-                    }
-                }
-                else
-                {
-                    building = null;
-                    resource = null;
-                }
+                building = build;
+                resource = null;
             }
+        }
+        else
+        {
+            building = null;
+            resource = null;
         }
     }
 
@@ -103,7 +96,8 @@ public class Robot : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-
+        if (!movileEntity.entity.isSelectable)
+            return;
         MenuLayout.singleton.DestroyAllChildren();
         for (int i = 0; i < builds.Length; i++)
         {

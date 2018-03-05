@@ -265,7 +265,8 @@ MonoBehaviour:
   range: 10
   cadence: 5
   targetCanBeAlly: 0
-  entity: {fileID: 0}
+  entity: {fileID: 114234204029097008}
+  movileEntity: {fileID: 114502537078122374}
   Damage: 10
 --- !u!114 &114502537078122374
 MonoBehaviour:

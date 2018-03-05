@@ -39,6 +39,8 @@ public class MovileEntity : MonoBehaviour
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out rh))
                 {
+                    SendMessage("MouseUp", rh, SendMessageOptions.DontRequireReceiver);
+
                     if (rh.collider != null)
                     {
                         if (rh.collider.CompareTag("Terrain"))

@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 
 public class Factory : MonoBehaviour
 {
-    public MovileEntity[] units;
+    public RtsEntity[] units;
     public float craftTime = 5;
     public Vector2 instanceRadius;
     RtsEntity entity;
 
-    Queue<MovileEntity> unitsQueue = new Queue<MovileEntity>();
+    Queue<RtsEntity> unitsQueue = new Queue<RtsEntity>();
     
     void Start()
     {
@@ -36,14 +36,14 @@ public class Factory : MonoBehaviour
         {
             int u = i;
             MenuLayout.singleton.AddChildren(
-                units[u].entity.preview,
-                units[u].entity.price.ToString(),
+                units[u].preview,
+                units[u].price.ToString(),
                 () => {
-                    if (units[u].entity.price > CivilizationMetrics.singleton[entity.faction].resources)
+                    if (units[u].price > CivilizationMetrics.singleton[entity.faction].resources)
                         return;
                     if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
                         return;
-                    CivilizationMetrics.singleton[entity.faction].resources -= units[u].entity.price;
+                    CivilizationMetrics.singleton[entity.faction].resources -= units[u].price;
                     AddUnitToQueue(u);
                 }
                 );
@@ -68,7 +68,7 @@ public class Factory : MonoBehaviour
         unitsQueue.Enqueue(units[unit]);
     }
 
-    Vector2 RandomInsideDonut(Vector2 donutRadius)
+    public static Vector2 RandomInsideDonut(Vector2 donutRadius)
     {
         var p = Random.Range(donutRadius.x, donutRadius.y);
         var a = Random.Range(0, 360);

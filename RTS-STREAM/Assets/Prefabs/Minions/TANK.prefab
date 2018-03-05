@@ -294,7 +294,8 @@ MonoBehaviour:
   range: 15
   cadence: 5
   targetCanBeAlly: 0
-  entity: {fileID: 0}
+  entity: {fileID: 114287271890774348}
+  movileEntity: {fileID: 114916997587447268}
   canonBallPrefab: {fileID: 114563913995766268, guid: b5aafecf9bbb026479c11399ba1d6b43,
     type: 2}
   canon: {fileID: 4360436972611232}

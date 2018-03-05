@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   units:
-  - {fileID: 114502537078122374, guid: 5eec0a915483b5c4e8a07275a4c52a53, type: 2}
+  - {fileID: 114234204029097008, guid: 5eec0a915483b5c4e8a07275a4c52a53, type: 2}
   craftTime: 10
   instanceRadius: {x: 10, y: 15}
 --- !u!208 &208779201112948130

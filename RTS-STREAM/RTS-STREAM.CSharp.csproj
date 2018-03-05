@@ -294,28 +294,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\NewScripts\Building.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\BuildingCraft.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\CameraScript.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\CivilizationMetrics.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\Combat.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\Factory.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\Info.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\MenuCard.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\MenuLayout.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\MovileEntity.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\OnClick.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\Proyectile.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\Resource.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\RtsEntity.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\UnitSelecter.cs" />
-    <Compile Include="Assets\Scripts\NewScripts\UsefulEvents.cs" />
+    <Compile Include="Assets\Scripts\Core\Building.cs" />
+    <Compile Include="Assets\Scripts\Core\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Core\CivilizationMetrics.cs" />
+    <Compile Include="Assets\Scripts\Core\Combat.cs" />
+    <Compile Include="Assets\Scripts\Core\Factory.cs" />
+    <Compile Include="Assets\Scripts\Core\MovileEntity.cs" />
+    <Compile Include="Assets\Scripts\Core\Proyectile.cs" />
+    <Compile Include="Assets\Scripts\Core\Resource.cs" />
+    <Compile Include="Assets\Scripts\Core\RtsEntity.cs" />
+    <Compile Include="Assets\Scripts\Core\UnitSelecter.cs" />
+    <Compile Include="Assets\Scripts\EnemyAiScript\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Airship.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\AntiAirplane.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Robot.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\RobotAttack.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\RobotHealer.cs" />
     <Compile Include="Assets\Scripts\SpecificScript\Tank.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\BuildingCraft.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\Info.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\MenuCard.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\MenuLayout.cs" />
+    <Compile Include="Assets\Scripts\UsefulScripts\OnClick.cs" />
+    <Compile Include="Assets\Scripts\UsefulScripts\UsefulEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Models\README.txt" />

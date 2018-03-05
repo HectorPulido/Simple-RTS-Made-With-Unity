@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727121040665104}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0332031, y: -0.0000019073486, z: 225.23923}
+  m_LocalPosition: {x: 0.5503998, y: 0, z: 216.5097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4743980436195492}
@@ -268,7 +268,8 @@ MonoBehaviour:
   range: 8
   cadence: 5
   targetCanBeAlly: 0
-  entity: {fileID: 0}
+  entity: {fileID: 114268487376489218}
+  movileEntity: {fileID: 114117345763991938}
   Damage: 5
 --- !u!135 &135126354718265086
 SphereCollider:

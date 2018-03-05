@@ -25,10 +25,22 @@ public class RtsEntity : MonoBehaviour
     {
         for (int i = 0; i < renderers.Length; i++)
         {
-            renderers[i].material.color = faction == FactionType.faction_1 ? Color.blue : Color.red;
+            renderers[i].material.color = faction == FactionType.faction_1 ? Color.blue : Color.green;
         }
     }
-
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.GetComponent<Proyectile>() != null)
+        {
+            var pro = col.GetComponent<Proyectile>();
+            if (pro.faction != faction)
+            {
+                health -= pro.damage;
+                CheckHealth();
+                Destroy(pro.gameObject);
+            }
+        }
+    }
     public void CheckHealth()
     {
         if (health > maxHealth)
