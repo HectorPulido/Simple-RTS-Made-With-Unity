@@ -11,8 +11,3 @@ https://www.twitch.tv/hector_pulido_<br/>
 
 ## HOW TO USE
 Open it on unity 2017.3 or greater (sorry about that >-< ), and play around with the project.
-
-## Patreon
-Please consider Support on Patreon<br/>
-![Please consider support on patreon](/Images/Patreon.png)<br/>
-https://www.patreon.com/HectorPulido
