@@ -1,6 +1,6 @@
 # SIMPLE RTS 
 <b>This is a RTS made with Unity and C#</b>
-![Banner](/Images/Banner.png)
+[![Video](https://img.youtube.com/vi/0Te858o_Rqo/0.jpg)](https://www.youtube.com/watch?v=0Te858o_Rqo)
 
 ## WHY (MOTIVATION)
 ![Example](/Images/ExampleImage.png) <br/>
