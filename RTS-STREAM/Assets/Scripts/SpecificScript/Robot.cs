@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Robot : MonoBehaviour
 {
-    public Building[] builds;    
+    public Building[] builds;
     public float craftRate;
     public float mineRate;
     public float range;

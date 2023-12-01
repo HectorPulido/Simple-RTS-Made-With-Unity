@@ -1,0 +1,17 @@
+{
+    "name": "Unity.Services.Analytics",
+    "references": [
+        "Unity.Services.AnalyticsRuntime",
+        "Unity.Services.Core",
+        "Unity.Services.Core.Internal"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

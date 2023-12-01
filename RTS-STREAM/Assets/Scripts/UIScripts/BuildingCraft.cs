@@ -38,7 +38,7 @@ public class BuildingCraft : MonoBehaviour
                 CraftingBuilding.canCraft = rh.normal == Vector3.up;
                 if (CraftingBuilding.canCraft)
                 {
-                    CraftingBuilding.canCraft = CraftingBuilding.collidersCount <= 1;
+                    CraftingBuilding.canCraft = CraftingBuilding.collidersCount <= 2;
                 }
             }
         }

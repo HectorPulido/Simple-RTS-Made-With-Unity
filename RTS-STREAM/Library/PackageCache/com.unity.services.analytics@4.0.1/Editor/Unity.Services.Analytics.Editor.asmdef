@@ -1,0 +1,20 @@
+{
+    "name": "Unity.Services.Analytics.Editor",
+    "references": [
+        "Unity.Services.Core.Internal",
+        "Unity.Services.Core.Editor",
+        "Unity.Services.Core",
+        "Unity.Services.Analytics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

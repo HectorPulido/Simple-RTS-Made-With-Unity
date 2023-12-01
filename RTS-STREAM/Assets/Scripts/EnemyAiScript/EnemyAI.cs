@@ -11,7 +11,6 @@ public class EnemyAI : MonoBehaviour
     List<CombatScript> combatUnits = new List<CombatScript>();
     List<Building> enemyBuild = new List<Building>();
 
-    // Use this for initialization
     void Start()
     {
         entity = GetComponent<RtsEntity>();
@@ -25,11 +24,12 @@ public class EnemyAI : MonoBehaviour
 
         yield return GenerateRobots(factories[0], 0, 3);
         GetRobots();
-        yield return SetResourcesRobots(robots.GetRange(0,2).ToArray()
-            , GameObject.FindObjectOfType<Resource>());
+
+        yield return SetResourcesRobots(robots.GetRange(0, 2).ToArray()
+            , FindObjectOfType<Resource>());
         yield return CreateBuild(robots[2], 1);
         yield return SetResourcesRobots(new Robot[] { robots[2] }
-            , GameObject.FindObjectOfType<Resource>());
+            , FindObjectOfType<Resource>());
         yield return GenerateRobots(factories[0], 1, 4);
         GetEnemyBuild();
         GetBattlers();
@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
         }
         yield return new WaitForSeconds(0);
     }
-    IEnumerator GenerateRobots(Factory factory, int id,int count)
+    IEnumerator GenerateRobots(Factory factory, int id, int count)
     {
         for (int i = 0; i < count; i++)
         {
@@ -65,11 +65,10 @@ public class EnemyAI : MonoBehaviour
             while (sw)
             {
                 sw = false;
-                var pos = Factory.RandomInsideDonut(new Vector2(1, 50)) 
+                var pos = Factory.RandomInsideDonut(new Vector2(1, 50))
                     + new Vector2(builder.transform.position.x, builder.transform.position.z);
 
-                RaycastHit rh;
-                if (Physics.Raycast(new Vector3(pos.x , 100, pos.y), Vector3.down, out rh))
+                if (Physics.Raycast(new Vector3(pos.x, 100, pos.y), Vector3.down, out RaycastHit rh))
                 {
                     if (rh.collider.CompareTag("Terrain"))
                     {
@@ -95,7 +94,7 @@ public class EnemyAI : MonoBehaviour
     {
         foreach (var item in enemyBuild)
         {
-            for (int i  = 0; i < combatUnits.Count; i ++)
+            for (int i = 0; i < combatUnits.Count; i++)
             {
                 combatUnits[i].target = item.entity;
             }
@@ -107,7 +106,7 @@ public class EnemyAI : MonoBehaviour
     }
     void GetRobots()
     {
-        var r = GameObject.FindObjectsOfType<Robot>();
+        var r = FindObjectsOfType<Robot>();
         for (int i = 0; i < r.Length; i++)
         {
             if (r[i].movileEntity.entity.faction == entity.faction)
@@ -117,17 +116,17 @@ public class EnemyAI : MonoBehaviour
     }
     void GetBattlers()
     {
-        var r = GameObject.FindObjectsOfType<CombatScript>();
+        var r = FindObjectsOfType<CombatScript>();
         for (int i = 0; i < r.Length; i++)
         {
             if (r[i].entity.faction == entity.faction)
                 if (!combatUnits.Contains(r[i]))
                     combatUnits.Add(r[i]);
-        }       
+        }
     }
     void GetEnemyBuild()
     {
-        var enemy = GameObject.FindObjectsOfType<Building>();
+        var enemy = FindObjectsOfType<Building>();
         for (int i = 0; i < enemy.Length; i++)
         {
             if (enemy[i].entity.faction != entity.faction)

@@ -7,6 +7,8 @@ public class CameraScript : MonoBehaviour
     //Movement
     public float borderMoveSpeed = 1.2f;
     public float screenOffset = .005f;
+    public Vector2 positionXLimits;
+    public Vector2 positionZLimits;
     // ZOOM
     public float zoomSpeed = 4f;
     public Vector2 zoomLimits;
@@ -27,7 +29,7 @@ public class CameraScript : MonoBehaviour
 
 
         // Camera movement per border
-        Vector3 Speed = new Vector3();
+        Vector3 Speed = new();
 
         if (Input.mousePosition.x < Screen.width * screenOffset)
             Speed.x -= borderMoveSpeed;
@@ -39,6 +41,12 @@ public class CameraScript : MonoBehaviour
         else if (Input.mousePosition.y > Screen.height - (Screen.height * screenOffset))
             Speed.z += borderMoveSpeed;
 
-        transform.position += Speed * Time.deltaTime;
+        var tempPositions = transform.position;
+        tempPositions += Speed * Time.deltaTime;
+
+        tempPositions.x = Mathf.Clamp(tempPositions.x, positionXLimits.x, positionXLimits.y);
+        tempPositions.z = Mathf.Clamp(tempPositions.z, positionZLimits.x, positionZLimits.y);
+
+        transform.position = tempPositions;
     }
 }

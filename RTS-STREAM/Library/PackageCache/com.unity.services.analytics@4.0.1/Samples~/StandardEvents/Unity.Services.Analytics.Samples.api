@@ -1,0 +1,51 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Services.Analytics
+{
+    public class AnalyticsEventHandler : UnityEngine.MonoBehaviour
+    {
+        public AnalyticsEventHandler() {}
+        public void RecordAcquisitionSourceEventWithOnlyRequiredValues();
+        public void RecordAcquisitionSourceEventWithOptionalParameters();
+        public void RecordCompleteAdImpressionEvent();
+        public void RecordCustomEventWithNoParameters();
+        public void RecordCustomEventWithParameters();
+        public void RecordMinimalAdImpressionEvent();
+        public void RecordPurchaseEventWithMultipleCurrencies();
+        public void RecordPurchaseEventWithMultipleItems();
+        public void RecordPurchaseEventWithOneItem();
+        public void RecordSaleEventWithMultipleItems();
+        public void RecordSaleEventWithOneItem();
+        public void RecordSaleEventWithOptionalParameters();
+        public void RecordSaleTransactionWithMultipleVirtualCurrencies();
+        public void RecordSaleTransactionWithOnlyRequiredValues();
+        public void RecordSaleTransactionWithRealCurrency();
+        public void RecordSaleTransactionWithVirtualCurrency();
+    }
+
+    public static class CustomEventSample
+    {
+        public static void RecordCustomEventWithNoParameters();
+        public static void RecordCustomEventWithParameters();
+    }
+
+    public class StandardEventSample
+    {
+        public StandardEventSample() {}
+        public static void RecordAcquisitionSourceEventWithOnlyRequiredValues();
+        public static void RecordAcquisitionSourceEventWithOptionalParameters();
+        public static void RecordCompleteAdImpressionEvent();
+        public static void RecordMinimalAdImpressionEvent();
+        public static void RecordPurchaseEventWithMultipleCurrencies();
+        public static void RecordPurchaseEventWithMultipleItems();
+        public static void RecordPurchaseEventWithOneItem();
+        public static void RecordSaleEventWithMultipleItems();
+        public static void RecordSaleEventWithOneItem();
+        public static void RecordSaleEventWithOptionalParameters();
+        public static void RecordSaleTransactionWithMultipleVirtualCurrencies();
+        public static void RecordSaleTransactionWithOnlyRequiredValues();
+        public static void RecordSaleTransactionWithRealCurrency();
+        public static void RecordSaleTransactionWithVirtualCurrency();
+    }
+}

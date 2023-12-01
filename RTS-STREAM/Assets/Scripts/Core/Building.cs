@@ -42,6 +42,9 @@ public class Building : MonoBehaviour
             return;
         craftUncompletedGO.SetActive(false);
         craftCompletedGO.SetActive(true);
+
+        if (entity == null)
+            entity = GetComponent<RtsEntity>();
     }
 
     void SetBuild()
@@ -50,6 +53,7 @@ public class Building : MonoBehaviour
             return;
         craftUncompletedGO.SetActive(true);
         craftCompletedGO.SetActive(false);
+        entity.SetColor();
     }
 
     void CraftPoint()

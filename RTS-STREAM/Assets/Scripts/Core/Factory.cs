@@ -11,7 +11,7 @@ public class Factory : MonoBehaviour
     RtsEntity entity;
 
     Queue<RtsEntity> unitsQueue = new Queue<RtsEntity>();
-    
+
     void Start()
     {
         entity = GetComponent<RtsEntity>();
@@ -38,7 +38,8 @@ public class Factory : MonoBehaviour
             MenuLayout.singleton.AddChildren(
                 units[u].preview,
                 units[u].price.ToString(),
-                () => {
+                () =>
+                {
                     if (units[u].price > CivilizationMetrics.singleton[entity.faction].resources)
                         return;
                     if (CivilizationMetrics.singleton[entity.faction].troops >= CivilizationMetrics.singleton[entity.faction].maxTroops)
@@ -59,9 +60,9 @@ public class Factory : MonoBehaviour
         CivilizationMetrics.singleton[entity.faction].troops++;
         var go = unitsQueue.Dequeue();
         var pos = RandomInsideDonut(instanceRadius);
-        Instantiate(go, 
-            new Vector3(pos.x + transform.position.x , 0 ,pos.y + transform.position.z), 
-            go.transform.rotation);        
+        Instantiate(go,
+            new Vector3(pos.x + transform.position.x, 0, pos.y + transform.position.z),
+            go.transform.rotation);
     }
     public void AddUnitToQueue(int unit)
     {
@@ -75,6 +76,6 @@ public class Factory : MonoBehaviour
 
         return new Vector2(Mathf.Sin(a * Mathf.Deg2Rad), Mathf.Cos(a * Mathf.Deg2Rad)) * p;
 
-    } 
+    }
 
 }
