@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This project has moved.** It now lives in [`AwesomeUnityProjects/simple-rts`](https://github.com/HectorPulido/AwesomeUnityProjects/tree/main/simple-rts). This repo is archived and read-only.
+
 # RTS UNITY TEMPLATE
 <b>This is a RTS made with Unity and C#</b><br/>
 RTS stands for Real-Time Strategy, and it refers to a genre of video games that involve strategic planning, resource management, and tactical control of units in real-time. In RTS games, players typically oversee an entire army or civilization and are responsible for making decisions on various aspects of gameplay, including resource gathering, base building, and combat.
